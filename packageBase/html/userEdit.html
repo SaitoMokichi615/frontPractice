@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>社内業務システムβ版-利用者情報編集-</title>
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/edit.css">
+</head>
+<body>
+  <!-- SideMenu -->
+  <header>
+    <h1><a href="./index.html">社内業務システムβ版</a></h1>
+    <dl class="menu">
+      <div>
+        <dt>Base</dt>
+        <dd><a href="./userList.html">利用者管理</a></dd>
+      </div>
+      <div>
+        <dt>Daily</dt>
+        <dd>日報管理</dd>
+      </div>
+    </dl>
+  </header>
+  <!-- SideMenu -->
+
+  <div class="container">
+    <main>
+      <h2>利用者情報編集</h2>
+      <form action="post">
+        <dl class="form-area">
+
+          <!-- 利用者姓名 -->
+          <dt>
+            <label for="name">利用者姓名</label>
+            <span>必須</span>
+          </dt>
+          <dd>
+            <div class="flex-container">
+              <!-- 姓 -->
+              <div class="flex-item">
+                <label for="family-name">姓</label>
+                <input type="text" id="family-name" name="user-family-name">
+                <p id="family-name-error" class="error-text"></p>
+              </div>
+              <!-- 姓 -->
+              <!-- 名 -->
+              <div class="flex-item">
+                <label for="last-name">名</label>
+                <input type="text" id="last-name" name="user-last-name">
+                <p id="last-name-error" class="error-text"></p>
+              </div>
+              <!-- 名 -->
+            </div>
+          </dd>
+
+          <!-- 利用者姓名(ふりがな) -->
+          <dt>
+            <label for="furigana">利用者姓名（ふりがな）</label>
+            <span>必須</span>
+          </dt>
+          <dd>
+            <div class="flex-container">
+              <div class="flex-item">
+                <label for="f-family-name">姓</label>
+                <input type="text" id="f-family-name" name="user-f-family-name">
+                <p id="f-family-name-error" class="error-text"></p>
+              </div>
+              <div class="flex-item">
+                <label for="f-first-name">名</label>
+                <input type="text" id="f-first-name" name="user-f-first-name">
+                <p id="f-first-name-error" class="error-text"></p>
+              </div>
+            </div>
+          </dd>
+          <!-- 利用者姓名(ふりがな) -->
+  
+         <!-- 性別 -->
+          <dt>
+            <label for="sex">性別</label>
+            <span>必須</span>
+          </dt>
+          <dd>
+            <div class="flex-column">
+              <div><input class="radio" type="radio" name="user-sex" value="M" checked>男性</div>
+              <div><input class="radio" type="radio" name="user-sex" value="F">女性</div>
+            </div>
+            <p id="sex-error" class="error-text"></p>
+          </dd>
+          <!-- 性別 -->
+
+          <!-- 生年月日 -->
+          <dt>
+            <label for="birth-date">生年月日</label>
+            <span>必須</span>
+          </dt>
+          <dd>
+            <div class="flex-container">
+              <!-- 日付 -->
+              <div class="flex-item">
+                <label for="birth-date">日付</label>
+                <input type="text" id="birth-date" name="user-birth-date">
+                <p id="birth-date-error" class="error-text"></p>
+              </div>
+              <!-- 日付 -->
+              <!-- 年齢 -->
+              <div class="flex-item">
+                <label for="age">年齢</label>
+                <input type="text" id="age" name="user-age">
+                <p id="age-error" class="error-text"></p>
+              </div>
+              <!-- 年齢 -->
+            </div>
+          </dd>
+          <!-- 生年月日 -->
+
+          <!-- 住所 -->
+          <dt>
+            <label for="address">住所</label>
+            <span>必須</span>
+          </dt>
+          <dd>
+            <!-- 郵便番号 -->
+            <label for="zip-code">郵便番号</label>
+            <input type="text" id="zip-code" name="user-zip-code">
+            <p id="zip-code-error" class="error-text"></p>
+            <!-- 郵便番号 -->
+            <div class="flex-container">
+              <!-- 都道府県 -->
+              <div class="flex-item">
+                <label for="prefecture">都道府県</label>
+                <input type="text" id="prefecture" name="user-prefecture">
+                <p id="prefecture-error" class="error-text"></p>
+              </div>
+              <!-- 都道府県 -->
+              <!-- 市町村 -->
+              <div class="flex-item">
+                <label for="municipality">市町村</label>
+                <input type="text" id="municipality" name="user-municipality">
+                <p id="municipality-error" class="error-text"></p>
+              </div>
+              <!-- 市町村 -->
+            </div>
+            <!-- 番地 -->
+            <label for="f-family-name">　番地　</label>
+            <input type="text" id="f-family-name" name="user-f-family-name">
+            <p id="f-family-name-error" class="error-text"></p>
+            <!-- 番地 -->
+          </dd>
+          <!-- 住所 -->
+
+          <!-- 電話番号 -->
+          <dt>
+            <label for="tel">電話番号</label>
+            <span>必須</span>
+          </dt>
+          <dd>
+            <div class="flex-container">
+              <!-- 電話 -->
+              <div class="flex-item">
+                <label for="phone-num">電話</label>
+                <input type="text" id="phone-num" name="user-phone-num">
+                <p id="phone-num-error" class="error-text"></p>
+              </div>
+              <!-- 電話 -->
+              <!-- 携帯 -->
+              <div class="flex-item">
+                <label for="cell-phone-num">携帯</label>
+                <input type="text" id="cell-phone-num" name="user-cell-phone-num">
+                <p id="cell-phone-num-error" class="error-text"></p>
+              </div>
+              <!-- 携帯 -->
+            </div>
+          </dd>
+          <!-- 電話番号 -->
+
+          <!-- 住居 -->
+          <dt>
+            <label for="residence">住居</label>
+            <span>必須</span>
+          </dt>
+          <dd>
+            <div class="flex-column">
+              <div><input class="radio" type="radio" name="user-residence" value="1" checked>自己所有(持家・マンション)</div>
+              <div><input class="radio" type="radio" name="user-residence" value="2">賃貸(借家・アパート)</div>
+              <div><input class="radio" type="radio" name="user-residence" value="3">グループホーム・ケアホーム</div>
+              <div><input class="radio" type="radio" name="user-residence" value="4">施設等</div>              
+            </div>
+            <p id="residence-error" class="error-text"></p>
+          </dd>
+          <!-- 住居 -->
+
+          <!-- 住まい -->
+          <dt>
+            <label for="live-type">住まい</label>
+            <span>必須</span>
+          </dt>
+          <dd>
+            <div class="flex-column">
+              <div><input class="radio" type="radio" name="user-live-type" value="1" checked>一人暮らし</div>
+              <div><input class="radio" type="radio" name="user-live-type" value="2">家族と同居</div>
+              <div><input class="radio" type="radio" name="user-live-type" value="3">家族以外と同居</div>
+              <div><input class="radio" type="radio" name="user-live-type" value="4">施設・グループホーム</div>              
+            </div>
+            <p id="live-type-error" class="error-text"></p>
+          </dd>
+          <!-- 住まい -->
+
+        </dl>
+        <div class="btn-area">
+          <button id="btn-submit" type="button">新規登録</button>
+        </div>
+      </form>
+    </main>
+  </div>
+  <script src="../js/accordion.js"></script>
+</body>
+</html>

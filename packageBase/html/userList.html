@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>社内業務システムβ版-利用者一覧-</title>
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/list.css">
+</head>
+<body>
+  <!-- SideMenu -->
+  <header>
+    <h1><a href="./index.html">社内業務システムβ版</a></h1>
+    <dl class="menu">
+      <div>
+        <dt>Base</dt>
+        <dd><a href="./userList.html">利用者管理</a></dd>
+      </div>
+      <div>
+        <dt>Daily</dt>
+        <dd>日報管理</dd>
+      </div>
+    </dl>
+  </header>
+  <!-- SideMenu -->
+
+  <div class="container">
+    <main>
+      <h2>利用者管理</h2>
+      <table class="table-users">
+        <thead>
+          <tr>
+            <th class="user-id">ID</th>
+            <th class="user-name">利用者氏名</th>
+            <th class="user-affiliation">所属事業所</th>
+            <th class="items">管理</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>近藤真郷</td>
+            <td>天神事業所</td>
+            <td class="btn-list">
+              <a class="btn btn-upd" href="/admin/editProduct?id=<%= product.id %>">編集</a>
+              <p class="btn btn-del" id="<%= product.id %>">削除</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="btn-area">
+        <a class="btn btn-add" href="./userEdit.html">新規追加</a>
+      </div>
+    </main>
+  </div>
+  <script src="../js/accordion.js"></script>
+</body>
+</html>

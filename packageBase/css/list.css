@@ -1,0 +1,99 @@
+@charset "utf-8";
+:root{
+  --color-back-gray: rgb(245, 245, 245);
+  --color-back-black: rgb(0, 0, 0);
+  --color-link-online-store: rgb(50, 50, 50);
+  --color-font: rgb(70, 70, 70);
+  --color-users-table: rgb(170, 170, 170);
+}
+
+table{
+  /* 隣り合うボーダーラインを１つにまとめる */
+  border-collapse: collapse;
+
+  /* 隣接セル間の余白をなくす */
+  border-spacing: 0;
+}
+
+/* サイズテーブル */
+main .table-users{
+  width: 100%;
+  border: 1px solid var(--color-font);
+  margin: 32px auto;
+
+  width: 80%;
+  margin: 0 auto;
+}
+
+main .table-users th, main .table-users td{
+  border: 1px solid var(--color-back-black);
+  text-align: center;
+  padding: 12px 0;  
+}
+
+main .table-users th{
+  background: var(--color-users-table);
+}
+/* main .table-users td:first-child{
+  background:lightgray;
+} */
+main .table-users td:last-child{
+  width: 30%;
+  padding: 1rem;
+  background:lightgray;
+}
+main .table-users td:last-child img{
+  width: 50%;
+  height: 100px;
+  object-fit: cover;
+}
+
+main .btn{
+  color: var(--color-font);
+  border-radius: 15px;
+  max-width: 40%;
+  display: inline-block;
+  padding: 0.25rem 1rem;
+  font-weight: bold;
+}
+main .btn-add{
+  background: rgb(120, 120, 220);
+  border: 2px solid blue;
+  transition: background 0.3s;
+  max-width: 50%;
+  cursor: pointer;
+}
+main .btn-add:hover{
+  background: rgb(120, 200, 255);
+  transition: background 0.3s;
+}
+main .btn-upd{
+  background: rgb(120, 220, 120);
+  border: 2px solid green;
+  transition: background 0.3s;
+}
+main .btn-upd:hover{
+  background: rgb(200, 255, 120);
+  transition: background 0.3s;
+}
+main .btn-del{
+  background: rgb(255, 150, 150);
+  border: 2px solid red;
+  transition: background 0.3s;
+  cursor: pointer;
+}
+main .btn-del:hover{
+  background: rgb(255, 200, 150);
+  transition: background 0.3s;
+}
+main .items{
+  width: 25%;
+}
+main .btn-area{
+  width: 20%;
+  margin: 2rem auto;
+}
+
+@media screen and (max-width: 900px){
+  
+}

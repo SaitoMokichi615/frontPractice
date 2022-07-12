@@ -1,0 +1,136 @@
+@charset "utf-8";
+
+/* common */
+:root{
+  --color-back-gray: rgb(245, 245, 245);
+  --color-link-online-store: rgb(50, 50, 50);
+  --color-font: rgb(70, 70, 70);
+  --color-item-size-table: rgb(170, 170, 170);
+}
+body{
+  display :flex;
+  flex-flow: row;
+  min-height: 100vh;
+  font-size: 16px;
+  font-family: "Helvetica Neue", "Arial", "Hirino Sans", "Hiragino Kaku Gothic ProN", "Meiryo", "sans-serif";
+}
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+img{
+  max-width: 100%;
+}
+
+/* Accordion */
+h1{
+  font-size: 18px;
+  border-bottom: 1px solid;
+  padding: 8px 16px;
+  margin-bottom: 16px;
+}
+.menu > div{
+  margin-bottom: 16px;
+}
+.menu dt{
+  padding: 2px 16px;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+}
+/* dt::before{
+  content:"Q. ";
+} */
+.menu dt::before{
+  content:"+";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 2px;
+  transition: transform 0.3s;
+}
+.menu dd{
+  padding: 0 16px;
+  display: none;
+  /* animation: 0.3s fadeOut; */
+  opacity: 0;
+  display: block;
+  height: 0;
+}
+/* dd::before{
+  content: "A. ";
+} */
+.menu  > div.appear dd{
+  display: block;
+  height: 1rem;
+  animation: 0.3s fadeIn;
+  opacity: 1;
+}
+.menu  > div.appear dt::before{
+  /* ×マークを+マークに見えるようにする */
+  transform: translateY(-50%) rotate(45deg);
+}
+
+@keyframes fadeIn{
+  0%{
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100%{
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes fadeOut{
+  0%{
+    opacity: 1;
+    transform: none;
+  }
+  100%{
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+/* SideMenu */
+header{
+  color: white;
+  text-shadow: 1px 1px 2px gray;
+  background: darkslategray;
+  min-width: 16%;
+  padding: 8px;
+}
+
+/* Main */
+.container{
+  width: 80%;
+}
+main{
+  width: 100%;
+}
+h2{
+  font-size: 32px;
+  padding: 8px 36px;
+  text-shadow: 1px 1px 2px gray;
+}
+
+@media screen and (max-width: 900px){
+  body{
+    flex-direction: column;
+  }
+  header{
+    width: 100%;
+  }
+  header .menu{
+    display: none;
+  }
+  header h1{
+    border-bottom: none;
+  }
+  .container{
+    width: 100%;
+  }
+}
