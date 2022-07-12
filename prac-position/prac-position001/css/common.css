@@ -1,0 +1,206 @@
+@charset "UTF-8";
+
+/* 基本設定 */
+html {
+  font-size: 100%;
+}
+body {
+  color: #333;
+  font-family: "游ゴシック体", "YuGothic", "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+  letter-spacing: 0.1em;
+}
+a {
+  color: #333;
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+li {
+  list-style: none;
+}
+
+/* コンテンツ共通要素 */
+.wrapper{
+  width: 80%;
+  margin: 2rem auto;
+  border: 1px solid gray;
+  background: lightpink;
+}
+.container{
+  display: flex;
+  justify-content: space-between;
+  background: lightcyan;
+  position: relative;
+}
+.content_title{
+  font-size: 2rem;
+  font-weight: bold;
+  background: gold;
+}
+.content_text{
+  background: lightgreen;
+}
+.content_footer{
+  height: 3rem;
+  background: gold;
+}
+
+/* 初期状態 */
+#content-normal .content_img{
+  width: 200px;
+  opacity: 0.7;
+}
+
+/* 実験１ */
+#content-prac001 .content_img{
+  width: 200px;
+  position: absolute;
+  top: 10px;
+  opacity: 0.7;
+  z-index: 1;
+}
+
+/* 実験２ */
+#content-prac002 .content_img{
+  width: 200px;
+  position: relative;
+  top: 10px;
+  opacity: 0.7;
+  z-index: 1;
+}
+
+/* 実験３ */
+#content-prac003 .content_img{
+  width: 200px;
+  position: absolute;
+  right: 10px;
+  opacity: 0.7;
+  z-index: 1;
+}
+
+/* 実験４ */
+#content-prac004 .content_img{
+  width: 200px;
+  position: relative;
+  right: 10px;
+  opacity: 0.7;
+  z-index: 1;
+}
+
+/* 実験５ */
+#content-prac005 .content_img{
+  width: 200px;
+  position: absolute;
+  bottom: 10px;
+  opacity: 0.7;
+  z-index: 1;
+}
+
+/* 実験６ */
+#content-prac006 .content_img{
+  width: 200px;
+  position: relative;
+  bottom: 10px;
+  opacity: 0.7;
+  z-index: 1;
+}
+
+/* 実験７ */
+#content-prac007 .content_img{
+  width: 200px;
+  position: absolute;
+  left: 10px;
+  opacity: 0.7;
+  z-index: 1;
+}
+
+/* 実験８ */
+#content-prac008 .content_img{
+  width: 200px;
+  position: relative;
+  left: 10px;
+  opacity: 0.7;
+  z-index: 1;
+}
+
+/* 実験９ */
+#content-prac009 .content_img{
+  width: 200px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  opacity: 0.7;
+  z-index: 1;
+}
+
+/* 実験１０ */
+#content-prac010 .content_img{
+  width: 200px;
+  position: relative;
+  top: 10px;
+  left: 10px;
+  opacity: 0.7;
+  z-index: 1;
+}
+
+/* 実験１１ */
+#content-prac011 .content_img{
+  width: 200px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  opacity: 0.7;
+  z-index: 1;
+}
+
+/* 実験１２ */
+#content-prac012 .content_img{
+  width: 200px;
+  position: relative;
+  top: 10px;
+  right: 10px;
+  opacity: 0.7;
+  z-index: 1;
+}
+
+/* 実験１３ */
+#content-prac013 .content_img{
+  width: 200px;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  opacity: 0.7;
+  z-index: 1;
+}
+
+/* 実験１４ */
+#content-prac014 .content_img{
+  width: 200px;
+  position: relative;
+  bottom: 10px;
+  left: 10px;
+  opacity: 0.7;
+  z-index: 1;
+}
+
+/* 実験１５ */
+#content-prac015 .content_img{
+  width: 200px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  opacity: 0.7;
+  z-index: 1;
+}
+
+/* 実験１６ */
+#content-prac016 .content_img{
+  width: 200px;
+  position: relative;
+  bottom: 10px;
+  right: 10px;
+  opacity: 0.7;
+  z-index: 1;
+}

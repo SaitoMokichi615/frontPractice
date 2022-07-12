@@ -1,0 +1,180 @@
+@charset "utf-8";
+
+/* common */
+:root{
+  --color-back-gray: rgb(245, 245, 245);
+  --color-back-black: rgb(50, 50, 50);
+  --color-font: rgb(70, 70, 70);
+  --color-item-size-table: rgb(170, 170, 170);
+}
+body{
+  max-width: 1000px;
+  margin: 0 auto;
+  font-family: "RaleWay", serif;
+  font-size: 12px;
+}
+ul{
+  list-style: none;
+}
+a{
+  color: var(--color-font);
+  text-decoration: none;
+}
+img{
+  max-width: 100%;
+}
+.wrapper{
+  max-width: 800px;
+  margin: 0 auto;
+}
+table{
+  /* 隣り合うボーダーラインを１つにまとめる */
+  border-collapse: collapse;
+
+  /* 隣接セル間の余白をなくす */
+  border-spacing: 0;
+}
+
+/* Header */
+header{
+  border-bottom: 1px solid var(--color-font);
+}
+header nav{
+  padding-bottom: 16px;
+}
+header .logo{
+  width: 120px;
+  margin: 32px auto;
+}
+header .flex-container{
+  display: flex;
+  justify-content: space-between;
+}
+header .left-menu{
+  width: 70%;
+  display: flex;
+  justify-content: left;
+}
+header .right-menu{
+  width: 30%;
+  display: flex;
+  justify-content: right;
+}
+header li{
+  padding: 0 8px;
+}
+
+/* Main */
+main .flex-container{
+  display: flex;
+  justify-content: space-between;
+  margin: 42px 0;
+}
+main .item-image{
+  width: 50%;
+}
+main .item-description{
+  width: 50%;
+  margin-left: 36px;
+}
+main .item-name{
+  border-top: 1px solid var(--color-font);
+  border-bottom: 1px solid var(--color-font);
+  padding: 16px 0;
+}
+main .item-text{
+  padding: 16px 0;
+}
+
+/* 数量テーブル */
+main .table-item-amount{
+  width: 100%;
+  margin: 16px auto;
+}
+
+/* tbody部分のセルの上部にボーダーをつける */
+main .table-item-amount td{
+  border-top: 1px solid var(--color-back-black);
+  text-align: center;
+}
+
+/* theadとtbody部分のセルの右側にボーダーをつける */
+main .table-item-amount th, main .table-item-amount td{
+  border-right: 1px solid var(--color-back-black);
+  padding: 12px 0;
+}
+
+/* 最後の要素にのみ指定（theadとtbody部分の最後のセル(=右端のセル)の右側にボーダーをつける） */
+main .table-item-amount th:last-child,
+main .table-item-amount td:last-child{
+  border-right: none;
+}
+
+/* ColorとSizeの列の幅を指定 */
+main .item-color, main .item-size{
+  width: 20%;
+}
+
+main .btn-cart{
+  display: inline-block;
+  color: white;
+  background: var(--color-back-black);
+  width: 100%;
+  height: 42px;
+  text-align: center;
+  padding: 12px 0;  
+}
+/* ドロップダウンの表示 */
+main select{
+  -webkit-appearance: menulist;
+  width: 75%;
+  border: 1px solid var(--color-back-black)
+}
+
+/* サイズテーブル */
+main .table-item-size{
+  width: 100%;
+  border: 1px solid var(--color-font);
+  margin: 32px auto;
+}
+
+main .table-item-size th, main .table-item-size td{
+  border: 1px solid var(--color-back-black);
+  text-align: center;
+  padding: 12px 0;  
+}
+
+main .table-item-size th,
+main .table-item-size td:first-child{
+  background: var(--color-item-size-table);
+}
+
+/* Footer */
+footer{
+  text-align: center;
+  padding: 12px 0;
+}
+
+@media screen and (max-width: 896px){
+
+  header{
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  /* はみ出た部分はスクロールで表示出来るようにする */
+  header nav{
+    overflow-x: scroll;
+  }
+  main .flex-container{
+    flex-direction: column;
+  }
+  main .item-image{
+    width: 90%;
+    margin: 0 auto;
+  }
+  main .item-description{
+    width: 90%;
+    margin: 0 auto;
+  }
+}

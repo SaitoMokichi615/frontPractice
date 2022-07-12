@@ -1,0 +1,283 @@
+@charset "utf-8";
+
+/* Common */
+:root{
+  --color-back-gray: rgb(245, 245, 245);
+  --color-back-black: rgb(50, 50, 50);
+  --color-font: rgb(70, 70, 70);
+  --color-item-size-table: rgb(170, 170, 170);
+}
+body{
+  font-size: 0.88rem;
+  background: var(--color-back-gray);
+}
+img{
+  max-width: 100%;
+}
+ul{
+  list-style: none;
+}
+a{
+  color: var(--color-font);
+  text-decoration: none;
+}
+.section-title-en{
+  font-size: 36px;
+  letter-spacing: 8px;
+}
+.section-title-jp{
+  position: relative;
+  font-weight: normal;
+  margin-bottom: 64px;
+}
+.section-title-jp::after{
+  /* 擬似要素で何か表示するときはcontentプロパティが必須 */
+  content: "";
+  display: block;
+  width: 60px;
+  height: 1px;
+  background-color: var(--color-font);
+  position: absolute;
+  top: 200%;
+  left: 0;
+}
+.badge{
+  background: black;
+  color: white;
+  font-weight: normal;
+  font-size: 12px;
+  padding: 1px;
+}
+.logo{
+  width: 100px;
+  padding-top: 8px;
+  margin: 0 32px;
+}
+#news, #buisiness, #company{
+  max-width: 1000px;
+  margin: 60px auto;
+} 
+
+/* Header */
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+header .flex-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav .menu{
+  display: flex;
+  justify-content: left;
+}
+header .menu li{
+  margin-left: 2rem;
+}
+header .btn-inquiry{
+  display: inline-block;
+  background: black;
+  min-width: 200px;
+  height: 100%;
+  color: white;
+  text-align: center;
+  padding:2rem;
+}
+
+/* Mainvisual */
+main #mainvisual img{
+  width: 100%;
+  height: calc(100vh);
+  object-fit: cover;
+}
+
+/* News */
+main #news .flex-container{
+  display: flex;
+  justify-content: space-between;
+}
+main #news .flex-item{
+  border-left: 1px solid var(--color-font);
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 2rem;
+}
+main #news .flex-item:first-child{
+  border-left: none;
+}
+
+/* About */
+main #about{
+  display: flex;
+  justify-content: space-between;
+}
+main #about .about-image{
+  width: 50%;
+}
+main #about .about-image img{
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+main #about .about-text{
+  padding: 3rem;
+  padding-top: 10rem;
+  width: 50%
+}
+
+/* Buisiness */
+main #buisiness .buisiness-title{
+  position: relative;
+  margin-left: 12px;
+  padding-left: 8px;
+}
+main #buisiness .buisiness-title::before{
+  position: absolute;
+  content: "";
+  left: -12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 2px;
+  background-color: var(--color-font);
+}
+main #buisiness .flex-container{
+  display: flex;
+  justify-content: space-between;
+}
+main #buisiness .left{
+  flex-direction: column;
+  margin-top: 6rem;
+}
+main #buisiness .right{
+  flex-direction: column;
+}
+main #buisiness .flex-item{
+  margin: 1rem 1rem;
+}
+
+/* Company */
+main #company{
+  position: relative;
+}
+main #company .company-text{
+  background: white;
+  width: 50%;
+  padding: 3rem;
+  height: 600px;
+}
+main #company dl{
+  display: flex;
+  flex-wrap: wrap;
+}
+main #company dt{
+  font-weight: bold;
+  width: 20%;
+  padding: 4px 0;
+}
+main #company dd{
+  width: 80%;
+  padding: 4px 0;
+}
+main #company .company-image{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 40%;
+  width: 50%;
+}
+main #company .company-image img{
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+/* Footer */
+footer{
+  background: white;
+  padding: 3rem 12rem;
+  padding-bottom: 0;
+}
+footer .flex-container{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+}
+footer .left{
+  text-align: center;
+}
+footer .copyright{
+  margin-left: 32px;
+  padding: 4px;
+}
+
+@media screen and (max-width: 900px){
+  header .btn-inquiry{
+    display: none;
+  }
+  header .flex-container{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  main #news .flex-container{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  main #news .flex-item{
+    padding-left: 1rem;
+  }
+  main #news, main #buisiness{
+    margin: 1rem 3rem;
+  }
+  main #about{
+    flex-direction: column;
+  }
+  main #about .about-image{
+    width: 100%;
+  }
+  main #about .about-text{
+    width: 100%;
+    padding-top: 1rem;
+  }
+  main #buisiness .flex-container{
+    flex-direction: column;
+  }
+  main #business .buisiness-image{
+    width: 100%;
+  }
+  main #buisiness .left{
+    margin-top: 0;
+  }
+  main #company{
+    /* 初期値に戻す */
+    position: static;
+    margin-bottom: 0;
+  }
+  main #company .company-text{
+    width: 90%;
+    margin: 0 auto;
+  }
+  main #company .company-image{
+    position: static;
+    width: 90%;
+    transform: translateY(0);
+    margin: 0 auto;
+    margin-top: 1rem;
+  }
+  footer{
+    padding-left: 3rem;
+  }
+  footer .flex-container{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  footer .logo{
+    margin-left: 0;
+  }
+  footer .copyright{
+    margin-left: 0;
+  }
+}

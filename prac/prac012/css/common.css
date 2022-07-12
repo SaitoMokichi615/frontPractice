@@ -1,0 +1,231 @@
+@charset "utf-8";
+
+/* common */
+:root{
+  --color-back-gray: rgb(245, 245, 245);
+  --color-link-online-store: rgb(50, 50, 50);
+  --color-font: rgb(70, 70, 70);
+  --color-item-size-table: rgb(170, 170, 170);
+}
+body{
+  font-size: 16px;
+  font-family: "Noto Sans", "Noto Sans JP";
+}
+ul{
+  list-style: none;
+}
+img{
+  max-width: 100%;
+}
+a{
+  color: black;
+}
+a:hover{
+  text-decoration: none;
+}
+.wrapper{
+  max-width: 1200px;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+main{
+  /* 固定ヘッダーが占有する高さより下げる */
+  transform: translateY(8rem);
+}
+
+/* header */
+header{
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  background: white;
+}
+header .logo{
+  margin: 1rem;
+}
+header nav{
+  background: black;
+}
+header .navigation{
+  display: flex;
+}
+header .navigation>li{
+  padding: 0.75rem 1rem;
+}
+header .navigation>li a{
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* pickup */
+#pickup{
+  margin: 2rem auto;
+  display: flex;
+  justify-content: space-between;
+}
+#pickup .flex-item{
+  width: 30%;
+}
+#pickup .link-detail{
+  padding: 0.5rem;
+  text-align: center;
+}
+
+/* main-contents */
+#main-contents{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4rem;
+}
+
+/* main-contents atricles*/
+#main-contents .articles{
+  width: 70%;
+}
+#main-contents .articles article{
+  margin-bottom: 4rem;
+}
+#main-contents .articles .article-info{
+  display: flex;
+  margin: 0.5rem 0;
+}
+#main-contents .articles .article-info p{
+  margin-left: 1.6rem;
+}
+#main-contents .articles .text{
+  text-align: center;
+}
+
+
+/* main-contents aside */
+#main-contents .aside{
+  width: 25%;
+}
+
+#main-contents .aside .profile{
+  text-align: center;
+}
+#main-contents .aside .profile .name{
+  margin: 1rem 0;
+}
+#main-contents .aside .profile img{
+  width: 50%;
+  border-radius: 50%;
+}
+
+#main-contents .aside .ranking{
+  margin: 2.4rem 0;
+  text-align: center;
+}
+#main-contents .aside .ranking article{
+  margin: 1rem 0;
+}
+
+#main-contents .aside .achives{
+  text-align: center;
+}
+#main-contents .aside .achives ul{
+  margin-top: 2rem;
+  text-align: left;
+}
+#main-contents .aside .achives li{
+  padding: 1rem;
+  border-top: 1px solid black;
+}
+#main-contents .aside .achives li:last-child{
+  border-bottom: 1px solid black;
+}
+
+/* footer */
+footer{
+  background-color: var(--color-back-gray);
+  padding-top: 3rem;
+
+  /* 固定ヘッダーが占有する高さより下げる */
+  transform: translateY(8rem);
+}
+footer .flex-container{
+  display: flex;
+  justify-content: space-between;
+}
+footer .flex-container .flex-item{
+  width: 30%;
+}
+footer #about .text{
+  margin: 1rem 0;
+}
+footer #about .link{
+  margin-left: 1rem;
+}
+footer #about .link p{
+  position: relative;
+}
+footer #about .link p::before{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -0.8rem;
+  content: "";
+  /* 三角形作成 */
+  border-style: solid;
+  border-width: 7.2px;
+  border-color: black;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+
+}
+footer #about .link a{
+  text-decoration: none;
+}
+
+footer #menu ul{
+  margin-top: 2rem;
+  text-align: left;
+}
+footer #menu li{
+  padding: 1rem;
+  border-top: 1px solid black;
+}
+footer #menu li:last-child{
+  border-bottom: 1px solid black;
+}
+footer #menu li a{
+  text-decoration: none;
+}
+footer .copyright{
+  margin-top: 3rem;
+  padding: 1rem;
+  text-align: center;
+} 
+
+@media screen and (max-width: 768px){
+  #pickup{
+    flex-direction: column;
+  }
+  #pickup .flex-item{
+    width: 100%;
+  }
+
+  #main-contents{
+    flex-direction: column;
+  }
+  #main-contents .articles, #main-contents .aside{
+    width: 100%;
+  }
+
+  footer{
+    margin-top: 4rem;
+  }
+  footer .flex-container{
+    flex-direction: column;
+  }
+  footer .flex-container .flex-item{
+    width: 100%;
+    margin: 2rem;
+  }
+}
+
+

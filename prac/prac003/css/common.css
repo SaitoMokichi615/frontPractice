@@ -1,0 +1,142 @@
+@charset "utf-8";
+
+/* custom-property */
+:root{
+  --section-color: rgb(240, 240,240);
+}
+
+/* common */
+img{
+  max-width: 100%;
+}
+ul{
+  list-style: none;
+}
+.container{
+  width: 1000px;
+  margin: 0 auto;
+  /* align-items: center; */
+}
+.wrapper{
+  width: 800px;
+  margin: 3rem auto;
+  padding: 2rem 3rem;
+}
+.index, .detail{
+  background-color: var(--section-color);
+}
+.section-title{
+  text-align: center;
+  margin: 1rem 0;
+}
+
+
+/* header */
+header{
+  margin-top: 2rem;
+}
+header .logo img{
+  width: 180px;
+}
+
+/* mainvisual */
+.mainvisual{
+  width: 1000px;
+  height: 400px;
+  background-image: url("../img/mainvisual.jpg");
+}
+
+/* index */
+.index{
+  padding: 60px;
+}
+.index .list-item{
+  border: 1px solid black;
+  padding: 30px;
+}
+.index ol{
+  display: table;
+  margin: 0 auto;
+}
+.index li{
+  margin: 1rem 0;
+}
+
+/* images */
+.images{
+  margin: 3rem auto;
+}
+.images-flex-container ul{
+  display :flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.images-flex-container li{
+  width: 49%;
+}
+
+/* detail */
+.detail{
+  padding: 2rem;
+}
+.detail-info dt{
+  font-weight: bold;
+}
+.detail-flex-container{
+  display: flex;
+}
+.detail-flex-container dl{
+  border-right: 1px solid black;
+  
+  width: 30%;
+  padding-right: 3rem;
+}
+.detail-flex-container dt{
+  font-weight: bold;
+}
+.detail-flex-container dd{
+  margin-bottom: 1rem;
+}
+.detail-description{
+  margin-left: 3rem;
+}
+.detail-description p{
+  margin-bottom: 0.5rem;
+}
+.detail-description a{
+  color: black;
+}
+.detail-description a:hover{
+  opacity: 0.7;
+}
+
+/* footer */
+footer{
+  text-align: center;
+  font-size: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 1024px){
+  .images-flex-container ul{
+    /* display: block; */
+    flex-direction: column;
+  }
+  .images-flex-container li{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .detail-flex-container{
+    flex-direction: column;
+  }
+  .detail-flex-container dl{
+    border-right: none;
+    border-bottom: 1px solid black;
+    width: 100%;
+  }
+  .detail-description{
+    margin: 2rem 0;
+  }
+  
+}

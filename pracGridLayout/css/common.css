@@ -1,0 +1,111 @@
+@charset "UTF-8";
+
+html {
+  font-size: 100%;
+}
+.box1{
+  background: hsl(0, 60%, 60%);
+}
+.box2{
+  background: hsl(60, 60%, 60%);
+}
+.box3{
+  background: hsl(120, 60%, 60%);
+}
+.box4{
+  background: hsl(180, 60%, 60%);
+}
+.box5{
+  background: hsl(240, 60%, 60%);
+}
+
+.container{
+  display: grid;
+  margin: 3rem 0;
+}
+
+.dynamic{
+  /* 列の幅を列挙（2列) (fr:可変幅を指定するときに使用)*/
+  /* grid-template-columns: 100px 1fr 2fr; */
+  /* grid-template-columns: repeat(4, 100px); */
+  /* grid-template-columns: repeat(auto-fill, 100px); */
+  
+  /* 余白(縦方向 横方向) */
+  /* gap: 10px 40px; */
+  
+  /* ブラウザ幅に応じて、列の幅を100px～1frの間に自動調整し、均等に配置 */
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  
+  /* 行の高さを列挙（3行） */
+  /* grid-template-rows: 100px 100px 100px; */
+  grid-auto-rows: 100px;
+}
+
+.static{
+  grid-template-columns: 100px [target-start] 100px 100px [target-end];
+  grid-template-rows: 100px 100px;
+}
+.static .box1{
+  /* グリッドライン（要素の配置を決める） */
+  grid-row: 2;
+  /* grid-column: 2 / span 2; */
+  /* grid-column: target-start / target-end; */
+  grid-column: target;
+}
+
+.flow{
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(4, 100px);
+
+  /* 空白部分にセルを埋め込む */
+  grid-auto-flow: column dense;
+
+  /* グリッドからはみ出したセルの幅指定 */
+  grid-auto-columns: 100px;
+}
+.flow .box2, .flow .box3{
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.template-areas{
+  grid-template-columns: repeat(5, 100px);
+  grid-template-rows: repeat(4, 100px);
+  
+  /* 領域間にはスペースを空ける */
+  /* 領域は矩形でないといけない（飛び石はNG） */
+  grid-template-areas: 
+    "r r r . ."
+    "r r r y y"
+    "c c g y y"
+    "c c b y y";
+}
+.template-areas .box1{
+  grid-area: r;
+}
+.template-areas .box2{
+  grid-area: y;
+}
+.template-areas .box3{
+  grid-area: g;
+}
+.template-areas .box4{
+  grid-area: c;
+}
+.template-areas .box5{
+  grid-area: b;
+}
+
+.layout{
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(2, 100px);
+  width: 400px;
+  height: 300px;
+  background: #eee;
+  justify-content: center;
+  align-content: center;
+}
+.layout>div{
+  width: 50px;
+  height: 50px;
+}

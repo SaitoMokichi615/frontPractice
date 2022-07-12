@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Work - Portfolio</title>
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <!-- <link rel="stylesheet" href="../css/reset.css"> -->
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+  <link rel="stylesheet" href="../css/common.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="wrapper">
+      <h1>
+        <a href="./index.html">
+          <img src="../img/logo.svg" alt="logo">
+        </a>
+      </h1>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#works">Works</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li>
+            <a href="https://www.istagram.com"><img src="../img/icon-instagram.png" alt="いんすた"></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Header -->
+
+    <main>
+      <!-- Mainvusial -->
+      <!-- pictureタグにて、画面幅に応じて、画像表示を切り替えることが出来る -->
+      <div class="mainvisual">
+        <picture>
+          <source media="(max-width: 600px)" srcset="../img/mainvisual-sp.jpg">
+          <img src="../img/mainvisual-pc.jpg" alt="メインビジュアル">
+        </picture>
+      </div>
+      <!-- Mainvusial -->
+
+      <!-- About -->
+      <section id="about" class="wrapper">
+        <h2 class="section-title">About</h2>
+        <!-- <div class="about-content">
+          <p>Masato Kondoh</p>
+        </div>
+        <div class="about-content" >
+          <p>住所：佐賀県唐津市某所に生息</p>
+          <p>TEL:080-****-****</p> 
+          <p>URL:ぐぐってください</p>
+          <p>MAIL:ひみつ♡</p>
+        </div> -->
+        <ul>
+          <li>Masato Kondoh</li>
+          <li>住所：佐賀県唐津市某所に生息</li>
+          <li>TEL:080-****-****</li>
+          <li>URL:ぐぐってください</li>
+          <li>MAIL:ひみつ♡</li>
+        </ul>
+        <div class="about-content">
+          <p>祇園精舎の鐘の声諸行無常の響きあり</p>
+          <p>ナスビが爆発</p>
+          <p>春は曙、夏は素麵流し</p>
+          <p>秋は焼き芋、冬は炬燵</p>
+        </div>
+      </section>
+      <!-- About -->
+      
+      <!-- Works -->
+      <section id="works" class="wrapper">
+        <h2 class="section-title">Works</h2>
+        <div class="flex-container">
+          <img src="../img/works1.jpg" alt="作品１">
+          <img src="../img/works2.jpg" alt="作品２">
+          <img src="../img/works3.jpg" alt="作品３">
+          <img src="../img/works4.jpg" alt="作品４">
+          <img src="../img/works5.jpg" alt="作品５">
+          <img src="../img/works6.jpg" alt="作品６">
+        </div>
+      </section>
+      <!-- Works -->
+      
+      <!-- News -->
+      <section id="news" class="wrapper">
+        <h2 class="section-title">News</h2>
+        <dl>
+          <dt>2022.XX.XX</dt>
+          <dd>公園でリコーダー演奏で投げ銭もらったョ</dd>
+          <dt>2022.XX.XX</dt>
+          <dd>中国語教室の卓球大会に行ったョ</dd>
+          <dt>2022.XX.XX</dt>
+          <dd>野球観戦してきたョ</dd>
+          <dt>2022.XX.XX</dt>
+          <dd>福岡市科学館でアインシュタイン展行ってきたョ</dd>
+          <dt>2022.XX.XX</dt>
+          <dd>九州国立博物館で北斎展見たョ</dd>
+        </dl>
+      </section>
+      <!-- News -->
+      
+      <!-- Contact -->
+      <section id="contact" class="wrapper">
+        <h2 class="section-title">Contact</h2>
+        <form action="#" method="post">
+          <dl>
+            <dt><label for="name">NAME</label></dt>
+            <dd><input type="text" name="txt-name"></dd>
+            <dt><label for="mail">E-mail</label></dt>
+            <dd><input type="text" name="txt-mail"></dd>
+            <dt><label for="message">MESSAGE</label></dt>
+            <dd><textarea name="txt-message"></textarea></dd>
+          </dl>
+          <div class="submit-button">
+            <input type="submit" name="btn-submit" value="送信">
+          </div>
+        </form>
+      </section>
+      <!-- Contact -->
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p><small>&copy; 2022 Masato</small></p>
+    </footer>
+    <!-- Footer -->
+</body>
+</html>

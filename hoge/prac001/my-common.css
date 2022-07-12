@@ -1,0 +1,181 @@
+@charset "UTF-8";
+
+/* 
+基本設定
+*/
+body {
+  color: #333;
+  font-family: "游ゴシック体", "YuGothic", "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+  letter-spacing: 0.1em;
+}
+a {
+  color: #333;
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+li {
+  list-style: none;
+}
+
+/* コンテンツ幅・レイアウトの共通設定 */
+.wrapper{
+  max-width: 960px;
+  text-align: center;
+  padding: 0 4%;
+}
+
+/* 
+ヘッダー、ロゴ、グロナビ
+*/
+#header{
+  display: flex;
+  justify-content: space-between;
+  margin: 0.8rem auto;
+  align-items: center;
+}
+#header li{
+  margin-left: 30px;
+}
+#logo{
+  width: 120px;
+}
+#global-nav ul{
+  display: flex;
+}
+
+/*
+セクション
+*/
+section{
+  margin: 2.0rem auto;
+}
+.section-title{
+  width: 20%;
+  font-size: 2.0rem;
+  padding: 0 0.2rem;
+  border-bottom: #333 solid;
+  margin: 0.5rem auto;
+}
+.item-title{
+  font-weight: bold;
+}
+
+/* 
+メインビジュアル
+*/
+.mainvisual{
+  position: relative;
+}
+#logo{
+  position: absolute;
+  margin: 1rem 1rem;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+#logo:hover{
+  opacity: 0.7;
+}
+#global-nav{
+  position: absolute;
+  margin: 1rem 1rem;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+.nav-item{
+  margin: 1rem 1rem;
+}
+.nav-item a{
+  font-weight: bold;
+}
+.nav-item a:hover{
+  opacity: 0.7;
+}
+.slider img{
+  height: 40rem;
+  width: 100%;
+  object-fit: cover;
+}
+/* #mainvisual{
+  object-fit: cover;
+} */
+/* .slider{
+  height: 805px;
+}
+.img1{
+  height: 805px;
+  background-image: url('../img/nagasaki.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.img2{
+  height: 805px;
+  background-image: url('../img/kumamoto.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.img3{
+  height: 805px;
+  background-image: url('../img/kaimon.jpg');
+  background-size: cover;
+  background-position: center;
+} */
+
+
+
+
+/* 
+About
+*/
+.about-inner{
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+#about img{
+  width: 16%;
+  border-radius: 50%;
+}
+.about-inner_text{
+  text-align: left;
+}
+
+/* 
+Bicycle
+*/
+.container{
+  display: flex;
+  justify-content: space-between;
+}
+.item{
+  width: 30%;
+}
+
+/* 
+フッター
+*/
+footer{
+  margin-top: 2.0rem;
+  text-align: center;
+}
+
+@media screen and (max-width:600px) { 
+  /*　画面サイズが600pxまではここを読み込む　*/
+  .about-inner{
+    display: flow-root;
+  }
+  .container{
+    display: flow-root;
+  }
+  .about-inner_text{
+    text-align: center;
+  }
+  .item{
+    width: 90%;
+    margin: 1.2rem auto;
+  }
+}

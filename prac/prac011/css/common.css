@@ -1,0 +1,239 @@
+@charset "utf-8";
+
+/* Common */
+:root{
+  --color-back-gray: rgb(245, 245, 245);
+  --color-link-online-store: rgb(50, 50, 50);
+  --color-font: rgb(70, 70, 70);
+  --color-item-size-table: rgb(170, 170, 170);
+}
+body{
+  background: var(--color-back-gray);
+  font-family: "Noto Serif JP";
+  font-size: 16px;
+  overflow:auto
+}
+img{
+  max-width: 100%;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+li{
+  list-style: none;
+}
+section{
+  width: 1024px;
+  margin: 3rem auto;
+}
+.section-title{
+  font-size: 32px;
+}
+.logo{
+  padding: 0 1rem;
+  margin-left: 3rem;
+}
+.logo img{
+  width: 32px;
+}
+
+/* Header */
+header{
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  background: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100vw;
+  height: 100vh;
+  background: url("../img/mainvisual-pc.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+header nav ul li{
+  padding: 0 0.5rem;
+}
+header .flex-box{
+  margin: 3rem;
+}
+header .link-online-store{
+  background: var(--color-link-online-store);
+  width: 3.4rem;
+  height: 13rem;
+  padding: 0.5rem;
+  text-align: center;
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+}
+header .link-online-store a{
+  display: inline-block;
+  border: 1px solid white;
+  padding: 0.4rem;
+}
+header .link-online-store a:hover{
+  opacity: 0.6;
+}
+
+/* News */
+#news{
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+}
+#news dl{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  border-right: 1px solid black;
+  margin: 4rem 5rem;
+}
+#news dd{
+  border-left: 1px solid black;
+  padding-left: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+#news dt{
+  padding-right: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+/* Products1 */
+#products1{
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+}
+#products1 .flex-container{
+  display: flex;
+  align-items: center;
+  margin-right: 1.2rem;
+}
+#products1 .flex-container p{
+  margin-top: 1rem;
+}
+#products1 .products1-image{
+  margin-top: 5rem;
+  margin-right: 1rem;
+  width: 50%;
+  position: relative;
+}
+#products1 .products1-description{
+  background: yellow;
+  -ms-writing-mode: tb-rl;
+  writing-mode: horizontal-tb;
+  padding: 2rem 3rem;
+  opacity: 0.7;
+  position: absolute;
+  top: 75%;
+  left: -5%;
+}
+
+/* Products2 */
+#products2{
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+}
+#products2 .flex-container{
+  display: flex;
+  align-items: center;
+  margin-right: 1.2rem;
+}
+#products2 .flex-container p{
+  margin-top: 1rem;
+}
+#products2 .products2-image{
+  margin-top: 5rem;
+  margin-right: 20rem;
+  width: 50%;
+  position: relative;
+}
+#products2 .products2-description{
+  background: red;
+  -ms-writing-mode: tb-rl;
+  writing-mode: horizontal-tb;
+  padding: 2rem 3rem;
+  opacity: 0.7;
+  position: absolute;
+  top: 75%;
+  right: -5%;
+  color: white;
+}
+
+/* Shop */
+#shop{
+  margin-top: 10rem;
+}
+#shop #map{
+  width: 100%;
+  vertical-align: bottom;
+}
+
+/* Footer */
+footer{
+  background: black;
+  width: 100vw;
+  height: 440px;
+  color: white;
+  padding-top: 1rem;
+}
+footer .flex-box{
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  width: 96%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 3rem;
+}
+footer .flex-box .right ul{
+  margin-right: 3rem;
+}
+footer .flex-box .right li{
+  padding: 0rem 0.5rem;
+}
+footer .copyright{
+  -ms-writing-mode: tb-rl;
+  writing-mode: horizontal-tb;
+  text-align: center;
+}
+footer .left{
+  display: flex;
+}
+footer .copyright{
+  color: white;
+}
+
+
+@media screen and (max-width: 768px){
+  header{
+    background: url("../img/mainvisual-sp.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .sp-hidden-item{
+    display: none;
+  }
+  section{
+    width: 100%;
+  }
+  #products1{
+    margin-left: 3rem;
+  }
+  #products1 .products1-image{
+   width: 80%;
+  }
+  #products2{
+    margin-top: 8rem;
+  }
+  #products2 .products2-image{
+    width: 80%;
+    margin-right: 0;
+  }
+}

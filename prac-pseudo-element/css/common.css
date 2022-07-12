@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+.family ul{
+  list-style: decimal;
+}
+.family li::marker{
+  color: blue;
+  font-size: 1.2rem;
+}
+
+.title{
+  color: gray;
+  text-align: left;
+}
+.title::after{
+  content: '-中央寄せしたいナ-';
+  font-size: 1rem;
+  display: block;
+}
+
+.drag{
+  font-weight: bold;
+}
+.drag::selection{
+  color: orange;
+  background-color: red;
+}
+.sentence{
+  padding: 1erm;
+  border: 1px solid green;
+  background-color: aqua;
+}
+.sentence::first-line{
+  font-weight: bold;
+  color: blue;
+}
+
+.word::first-letter{
+  font-size:5rem;
+  font-weight: bold;
+}

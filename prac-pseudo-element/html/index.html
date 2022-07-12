@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>擬似要素サンプル</title>
+  <link rel="stylesheet" type="text/css" href="../css/reset.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <style>
+    .title{
+      color: gray;
+      text-align: left;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .title::after{
+      content: '-中央寄せしたいナ-';
+      font-size: 1rem;
+      display: block;
+    }
+
+    .content{
+      padding: 2.5rem;
+      background-color: lightcyan;
+      width: 20rem;
+      position: relative;
+      border-radius: 2%;
+      margin-left: 4rem;
+    }
+    .content::first-line{
+      font-weight: bold;
+      color: blue;
+    }
+    .content::before{
+      padding: 1% 3%;
+      position: absolute;
+      content: "NEW !";
+      font-weight: bold;
+      font-size: 0.75rem;
+      border-radius: 50%;
+      top: 0;
+      left: 0;
+      color: yellow;
+      background-color: red;
+    }
+    .content::after{
+      position: absolute;
+
+      /* contentプロパティがないと擬似要素が消えるので注意！！*/
+      content: '';
+
+      /* 三角形作成 */
+      border-top: 2rem solid lightcyan;
+      border-right: 2rem solid transparent;
+      border-left: 2rem solid transparent;
+      
+      /* 三角形位置調整 */
+      top: 100%;
+      left: 50%;
+
+       /* 三角形位置補正 */
+      transform: translateX(-50%);
+    }
+
+    .word::first-letter{
+      font-size:5rem;
+      font-weight: bold;
+    }
+
+    .drag{
+      font-weight: bold;
+    }
+    .drag::selection{
+      color: orange;
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+
+  <h2 class="title">擬似要素サンプル</h2>
+  <div class="content">
+    <p>商品名</p>
+    <p>値段</p>
+    <p>商品説明</p>
+  </div>
+  
+  <div class="word">
+    <p>天上天下唯我独尊</p>
+  </div>
+
+  <p class="drag">ドラッグするとどう変化するかな？</p>
+  
+</body>
+</html>

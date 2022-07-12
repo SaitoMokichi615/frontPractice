@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>カスタムデータ属性</title>
+  <style>
+    p::before{
+      content: attr(data-name);
+    }
+  </style>
+</head>
+<body>
+  <p data-name="ジャギ様：">俺の名を言ってみろ。</p>
+  <p data-name="ケンシロウ：">北斗百裂拳。</p>
+</body>
+</html>

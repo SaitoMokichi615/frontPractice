@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexContainer</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/common.css">
+
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- JQuery -->
+  </head>
+<body>
+  <!-- Controller -->
+  <div class="flex-controller">
+    <!-- Justify-Content -->
+    <div class="flex-controller-option">
+      <h2 class="flex-radio-title">justify-content</h2>
+      <div class="flex-radio">
+        <input type="radio" name="justify-content" value="start" checked>start
+      </div>
+      <div class="flex-radio">
+        <input type="radio" name="justify-content" value="end">end
+      </div>
+      <div class="flex-radio">
+        <input type="radio" name="justify-content" value="space-between">space-between
+      </div>
+      <div class="flex-radio">
+        <input type="radio" name="justify-content" value="space-around">space-around
+      </div>
+    </div>
+    <!-- Justify-Content -->
+
+    <!-- Flex-Wrap -->
+    <div class="flex-controller-option">
+      <h2 class="flex-radio-title">flex-wrap</h2>
+      <div class="flex-radio">
+        <input type="radio" name="flex-wrap" value="nowrap" checked>nowrap
+      </div>
+      <div class="flex-radio">
+        <input type="radio" name="flex-wrap" value="wrap">wrap
+      </div>
+      <div class="flex-radio">
+        <input type="radio" name="flex-wrap" value="wrap-reverse">wrap-reverse
+      </div>
+    </div>
+    <!-- Flex-Wrap -->
+
+    <!-- Align Items -->
+    <div class="flex-controller-option">
+      <h2 class="flex-radio-title">align-items</h2>
+      <div class="flex-radio">
+        <input type="radio" name="align-items" value="flex-start" checked>flex-start
+      </div>
+      <div class="flex-radio">
+        <input type="radio" name="align-items" value="center">center
+      </div>
+      <div class="flex-radio">
+        <input type="radio" name="align-items" value="flex-end">flex-end
+      </div>
+    </div>
+    <!-- Align Items -->
+
+    <!-- Flex-Direction -->
+    <div class="flex-controller-option">
+      <h2 class="flex-radio-title">flex-direction</h2>
+      <div class="flex-radio">
+        <input type="radio" name="flex-direction" value="row" checked>row
+      </div>
+      <div class="flex-radio">
+        <input type="radio" name="flex-direction" value="row-reverse">row-reverse
+      </div>
+      <div class="flex-radio">
+        <input type="radio" name="flex-direction" value="column">column
+      </div>
+      <div class="flex-radio">
+        <input type="radio" name="flex-direction" value="column-reverse">column-reverse
+      </div>
+    </div>
+    <!-- Flex-Direction -->
+  </div>
+  <!-- Controller -->
+
+  <!-- Button -->
+  <div class="btn-list">
+    <div class="btn btn-add-flex-item">
+      <p>Add Flex Item</p>
+    </div>
+    <div class="btn btn-remove-flex-item">
+      <p>Remove Flex Item</p>
+    </div>
+  </div>
+  <!-- Button -->
+
+  <!-- Flex-Container -->
+  <div class="flex-container">
+    <!-- Flex-Item -->
+    <div class="flex-item">
+      <h2 class="item-title">商品1名称</h2>
+      <div class="item-image">
+        <img src="../img/photo.jpg" alt="商品1画像">
+      </div>
+      <p class="item-description">商品1の概要</p>
+    </div>
+    <!-- Flex-Item -->
+
+    <!-- Flex-Item -->
+    <div class="flex-item">
+      <h2 class="item-title">商品2名称</h2>
+      <div class="item-image">
+        <img src="../img/photo.jpg" alt="商品2画像">
+      </div>
+      <p class="item-description">商品2の概要</p>
+    </div>
+    <!-- Flex-Item -->
+
+    <!-- Flex-Item -->
+    <div class="flex-item">
+      <h2 class="item-title">商品3名称</h2>
+      <div class="item-image">
+        <img src="../img/photo.jpg" alt="商品3画像">
+      </div>
+      <p class="item-description">商品3の概要</p>
+    </div>
+    <!-- Flex-Item -->
+  </div>
+  <!-- Flex-Container -->
+
+  <!-- JavaScript -->
+  <script src="../js/flexContainerController.js"></script>
+  <!-- JavaScript -->
+</body>
+</html>

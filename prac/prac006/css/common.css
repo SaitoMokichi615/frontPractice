@@ -1,0 +1,114 @@
+@charset "utf-8";
+
+/* common */
+html{
+  font-size: 100%;
+}
+body{
+  /* 英文字はCrimson Text, 日本語はserifが適用される */
+  font-family: "Crimson Text", serif;
+}
+img{
+  max-width: 100%;
+  vertical-align: bottom;
+}
+a{
+  color: black;
+  text-decoration: none;
+}
+.logo img{
+  width: 120px;
+}
+/* .flex-container{
+  margin-bottom: 2rem;
+} */
+.image{
+  width: 50%;
+}
+.content{
+  padding: 0 5.5rem;
+}
+.content-title{
+  font-size: 1.4rem;
+}
+.content-title-en{
+  font-size: 1rem;
+  font-weight: normal;
+  margin-bottom: 1rem;
+}
+main{
+  width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+.wrapper{
+  display: flex;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+/* mainvisual */
+.mainvisual{
+  width: 90vw;
+  margin: 3rem auto;
+}
+
+/* header */
+header{
+  width: 90vw;
+  margin: 0 auto;
+}
+header nav ul{
+  display: flex;
+  justify-content: left;
+  list-style: none;
+}
+header li{
+  margin: 0.5rem 1rem;
+}
+
+/* footer */
+footer{
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 767px){
+  .mainvisual{
+    width: 100%;
+    margin: 0;
+  }
+  .mainvisual img{
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+  }
+  .wrapper{
+    display: flex;
+    flex-direction: column;
+  }
+  #work{
+    flex-direction: column-reverse;
+  }
+  .image{
+    width: 100%;
+  }
+  .image img{
+    max-width: 100%;
+    object-fit: cover;
+  }
+  .content{
+    width: 100%;
+    padding: 0;
+  }
+  main{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  footer{
+    width: 100%;
+  }
+}
