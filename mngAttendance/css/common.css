@@ -1,0 +1,64 @@
+.wrapper{
+    width: 80%;
+    min-width: 600px;
+    background-color: rgb(187, 220, 231);
+    color: #333;
+    margin: 1rem auto;
+}
+
+h1{
+    text-align: center;
+    font-size: 30px;
+    line-height: 80px;
+}
+
+.calendar{
+    padding: 20px 40px;
+    width: 100%;
+    table-layout: fixed;
+    
+    /* 隣り合うボーダーラインを１つにまとめる */
+    /* border-collapse: collapse; */
+
+    /* 隣接セル間の余白をなくす */
+    border-spacing: 0;
+}
+
+th,td {
+    padding: 4px;
+    border: 1px solid #333;
+}
+th{
+    text-align: center;
+    background-color: #ccc;
+}
+td{
+    background-color: #fff;
+    font-weight: bold;
+    height: 100px;
+    vertical-align: top;
+}
+select{
+    width: 100%;
+    font-weight: normal;
+    text-align: center;
+    font-size: 1.4em;
+    border: none;
+}
+/* select:nth-child(2){
+    color: red;
+}
+option:nth-child(2){
+    color: red;
+} */
+
+.sun{
+    color: red;
+}
+.sat{
+    color: blue;
+}
+.other-month{
+    color: gray;
+    background-color: #eee;
+}
